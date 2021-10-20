@@ -1,0 +1,11 @@
+# Server version 0.08 running on 192.168.0.139:8123
+# Game ID: 57
+# Board class: pentago_twist.PentagoBoard
+# Timeout: 20000
+# First Move Timeout: 30000
+# Date: Thu Mar 18 22:46:56 EDT 2021
+# Player 1: Player-0, '260836366', running on 192.168.0.139
+# Player 2: Player-1, 'Human', running on 192.168.0.139
+START Player-0 260836366
+START Player-1 Human
+0 0 0 0 0

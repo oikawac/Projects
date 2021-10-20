@@ -1,0 +1,12 @@
+# Server version 0.08 running on caileans-mini:8123
+# Game ID: 566
+# Board class: pentago_twist.PentagoBoard
+# Timeout: 20000
+# First Move Timeout: 30000
+# Date: Sun Apr 04 22:01:33 EDT 2021
+# Player 1: Player-0, '260836366', running on caileans-mini
+# Player 2: Player-1, '260836366', running on caileans-mini
+START Player-0 260836366
+START Player-1 260836366
+GAMEOVER TIMEOUT WINNER 1
+# Game ended: Sun Apr 04 22:02:44 EDT 2021

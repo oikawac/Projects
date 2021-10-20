@@ -1,0 +1,24 @@
+# Server version 0.08 running on caileans-mini:8123
+# Game ID: 10
+# Board class: pentago_twist.PentagoBoard
+# Timeout: 20000
+# First Move Timeout: 30000
+# Date: Wed Apr 07 22:45:57 EDT 2021
+# Player 1: Player-0, 'RandomPlayer', running on localhost
+# Player 2: Player-1, '260836366', running on localhost
+START Player-0 RandomPlayer
+START Player-1 260836366
+5 2 2 0 0
+1 4 2 1 1
+0 3 0 0 0
+1 1 2 1 1
+4 0 2 1 0
+2 4 2 0 1
+2 1 0 1 0
+1 0 0 0 1
+5 3 2 1 0
+5 0 0 1 1
+2 1 0 0 0
+0 4 1 0 1
+GAMEOVER WINNER 1
+# Game ended: Wed Apr 07 22:46:09 EDT 2021

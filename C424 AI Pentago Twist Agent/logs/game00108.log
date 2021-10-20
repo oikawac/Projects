@@ -1,0 +1,12 @@
+# Server version 0.08 running on caileans-mini:8123
+# Game ID: 108
+# Board class: pentago_twist.PentagoBoard
+# Timeout: 20000
+# First Move Timeout: 30000
+# Date: Fri Mar 19 22:30:06 EDT 2021
+# Player 1: Player-0, 'Human', running on caileans-mini
+# Player 2: Player-1, '260836366', running on caileans-mini
+START Player-0 Human
+START Player-1 260836366
+1 4 1 1 0
+1 5 3 0 1
