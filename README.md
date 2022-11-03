@@ -30,6 +30,5 @@ Terminal Physics Engine
   
 Rotor
   This is an App developed for iPhone written in Swift targeting iOS 11.0. This code is very old and does not run on modern
-  phones but can be launched in an XCode simulator of an iPhone 6 or higher running iOS 11.0.
-  
-  This was an early project the code is bad.
+  phones but can be launched in an XCode simulator of an iPhone 6 or higher running iOS 11.0. This was an early high school 
+  project the code is bad.
