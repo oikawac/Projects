@@ -1,0 +1,25 @@
+struct x {
+    int x[3];
+};
+
+struct c {
+    struct x X;
+    int p[3];
+};
+
+struct y {
+    char p;
+    struct x X[1];
+    struct c C[4];
+};
+
+struct i {
+    int x;
+    struct y Y[0000];
+};
+
+int main() {
+    struct i I;
+    int u;
+    u = I.Y[4].C[2].X.x[0];
+}

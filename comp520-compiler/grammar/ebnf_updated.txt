@@ -1,0 +1,118 @@
+
+program 	::= includeStar structdeclStar vardeclStar fundeclStar EOF
+
+includeStar 	::= include includeStar
+		|   epsilon
+
+structdeclStar	::= structdecl structdeclStar
+		|   epsilon
+
+vardeclStar	::= vardecl vardeclStar
+		|   epsilon
+
+vardeclPlus	::= vardecl vardeclStar
+		|   vardecl
+
+fundeclStar	::= fundecl fundeclStar
+		|   epsilon
+
+include     ::= INCLUDE STRINGLITERAL
+structdecl	::= structtype "{" vardeclPlus "}" ";"
+
+structtype	::= "struct" IDENT
+
+vardecl		::= type IDENT ";"
+
+type		::= datatype asterixOption
+
+datatype	::= INT
+		|   CHAR
+		|   VOID
+		|   structtype
+
+asterixOption	::= "*"
+		|   epsilon
+
+fundecl		::= type IDENT "(" severalparamOption ")" block
+
+severalparamOption	::= severalparam
+			|   epsilon
+
+severalparam	::= param
+		|   param subsequentparam
+
+subsequentparam	::= "," param
+		|   epsilon
+
+param		::= type IDENT
+
+block		::= "{" vardeclStar stmtStar "}"
+
+stmtStar	::= stmt stmtStar
+		|   epsilon
+
+stmt 		::= block
+		|   "while" "(" exp ")" stmt
+		|   IF "(" exp ")" stmt elseOption
+		|   RETURN expOption ";"
+		|   exp stmtPrime
+
+stmtPrime	::= "=" exp ";"
+		|   ";"
+
+exp		::= "(" exp ")"
+		|   IDENT
+		|   INT_LITERAL
+		|   "-" exp
+		|   "+" exp
+		|   CHAR_LITERAL
+		|   STRING_LITERAL
+		|   exp expPrime
+		|   valueat
+		|   addressof
+		|   funcall
+		|   sizeof
+		|   typecast
+
+expPrime	::= binaryoperator exp
+		|   "[" exp "]"
+		|   "." IDENT
+
+binaryoperator  ::= ">"
+		|   "<"
+		|   ">="
+		|   "<="
+		|   "!="
+		|   "=="
+		|   "+"
+		|   "-"
+		|   "/"
+		|   "*"
+		|   "%"
+		|   "||"
+		|   "&&"
+
+funcall		::= IDENT "(" severalinputOption ")"
+
+severalinputOption	::= severalInput
+			|   epsilon
+
+severalinput	::= exp
+		|   exp subsequentinput
+
+subsequentinput ::= "," exp
+		|   epsilon
+
+arrayaccess	::= exp "[" exp "]"		#primed
+fieldaccess	::= exp "." IDENT		#primed
+valueat		::= "*" exp
+addressof	::= "&" exp
+sizeof		::= "sizeof" "(" type ")"
+typecast	::= "(" type ")" exp
+
+expOption	::= exp
+		|   epsilon
+
+elseOption	::= ELSE stmt
+		|   epsilon
+
